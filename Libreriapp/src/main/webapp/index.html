@@ -1,0 +1,55 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Hello App Engine</title>
+  </head>
+
+  <body>
+    <h1>Hello App Engine!</h1>
+  
+    <table>
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
+      </tr>
+      <tr>
+        <td><a href='/hello'>The servlet</a></td>
+      </tr>
+    </table>
+    <form action="/hello" method="post" name="fillPerson">
+
+		Nombre: <input name="name" type="text" /> <br />
+		Apellido: <input name="lastName" type="text" /> <br />
+		E-mail: <input name="email" type="text" /> <br />
+		Password: <input name="password" type="password" /> <br />
+		<input name="submit" type="submit" value="Enviar" /> <br />
+	
+	</form>
+	<br />
+	<p>Consulte todos los usuarios guardados, clic </p><a href='/other'>Aquí</a>
+	<br />
+	<br />
+	<p>Agrege libros</p>
+	<form action="/books" method="get" name="formBooks">
+		Nombre:	<input name="name" type="text" /> <br />
+		Autor: <input name="author" type="text" /> <br />
+		Páginas: <input name="pages" type="text" /> <br />
+		Tema: <input name="topic" type="text" /> <br />
+		Precio: <input name="price" type="text" /> <br />
+		Email Persona: <input name="emailPerson" type="text" /> <br />
+		<input name="submit" type="submit" value="Enviar" />
+	</form>
+	<br />
+	<p>Consulte todos los libros guardados, clic <a href='/allbooks'>Aquí</a></p>
+	<br />
+	<br />
+	<p>Consulte todos los libros de un usuario</p>
+	<br />
+	<form action="/findBooksByEmail" method="get" name="emailBooks">
+		Email:	<input name="email" type="text" />
+		<input name="submit" type="submit" value="Enviar" />
+	</form>
+  </body>
+</html>
